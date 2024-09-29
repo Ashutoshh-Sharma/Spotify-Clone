@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>'Spotify - Web Player: Music for everyone'</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="images/close.svg" id="close" alt="">
+        <div class="logo">
+          <img width="100" src="images/logo.svg" alt="" id="logo_spotify" />
+          <div class="nav_item">
+            <div class="home">
+              <img width="25" src="images/home.svg" alt="" />
+              <p>Home</p>
+            </div>
+            <div class="search">
+              <img width="25" src="images/search.svg" alt="" />
+              <p>Search</p>
+            </div>
+          </div>
+        </div>
+        <div class="library">
+          <div class="header-library">
+            <img width="25" src="images/playlist.svg" alt="" />
+            <h2>Your Library</h2>
+            <img src="images/plus.svg" alt="" />
+          </div>
+          <div class="library-card-container"></div>
+        </div>
+        <div class="footer">
+          <div>
+            <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/jp/privacy/"
+              ><span>Privacy Center</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/jp/legal/privacy-policy/"
+              ><span>Privacy Policy</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/jp/legal/cookies-policy/"
+              ><span>Cookies</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"
+              ><span>About Ads</span></a
+            >
+          </div>
+          <div>
+            <a href="https://www.spotify.com/jp/accessibility/"
+              ><span>Accessibility</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="nav">
+          <div class="nav-btns">
+            <img src="images/hamburger.svg" id="hamburger" alt="">
+            <div class="button-container">
+              <img width="40" src="images/back.svg" alt="" />
+              <img width="40" src="images/next.svg" alt="" />
+            </div>
+          </div>
+          <div class="nav-login">
+            <button id="signup">Sign up</button>
+            <button id="login">Log in</button>
+          </div>
+        </div>
+        <div class="advertisement">
+          <video
+            id="add-bg"
+            src="images/bg-video.mp4"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+        <div class="artist">
+          <h1>Popular artists</h1>
+          <div class="artist-container">
+            <div class="artist-card">
+              <img src="images/artist1.jpg" alt="" />
+              <h4>Pritam</h4>
+              <h6>Artist</h6>
+            </div>
+            <div class="artist-card">
+              <img src="images/artist2.jpg" alt="" />
+              <h4>Arjit Singh</h4>
+              <h6>Artist</h6>
+            </div>
+            <div class="artist-card">
+              <img src="images/artist3.jpg" alt="" />
+              <h4>A.R. Rahman</h4>
+              <h6>Artist</h6>
+            </div>
+            <div class="artist-card">
+              <img src="images/artist4.jpg" alt="" />
+              <h4>Anirudh</h4>
+              <h6>Artist</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="album">
+          <h1>Popular albums</h1>
+          <div class="album-container"></div>
+        </div> -->
+
+        <div class="album">
+          <h1>Spotify Playlists</h1>
+          <div class="album-container">
+            <div class="album-card">
+              <img src="images/bollywood.jpg" alt="" />
+              <img data-index="0" class="play" src="images/play.svg" alt="" />
+              <h4>Bollywood Tadka 🎪</h4>
+              <h6>Gentle Ambient piano to help you fall asleep.</h6>
+            </div>
+            <div class="album-card">
+              <img src="images/punjabi.jpg" alt="" />
+              <img data-index="1" class="play" src="images/play.svg" alt="" />
+              <h4>Punjabi Tadka ⚡</h4>
+              <h6>
+                Sleep with sounds of pouring rain and ocassional rolling...
+              </h6>
+            </div>
+            <div class="album-card">
+              <img src="images/with him.jpg" alt="" />
+              <img data-index="2" class="play" src="images/play.svg" alt="" />
+              <h4>With Him ❤</h4>
+              <h6>Instrumental bats for a restful night's sleep.</h6>
+            </div>
+            <div class="album-card">
+              <img src="images/1.jpg" alt="" />
+              <img data-index="3" class="play" src="images/play.svg" alt="" />
+              <h4>Random Tadka ✨</h4>
+              <h6>Smoothing, minimalist ambient for deep sleep.</h6>
+            </div>
+          </div>
+        </div>
+        <div class="blank"></div>
+        <div class="playarea">
+          <div class="abovebar">
+            <div class="songinfo">
+              <marquee behavior="" direction="left"
+                ><h4 id="songheading"></h4
+              ></marquee>
+              <h6 id="songauother">Ashutosh</h6>
+            </div>
+            <div class="songbuttons">
+              <img
+                id="back"
+                width="35"
+                class="pointer"
+                src="images/prevsong.svg"
+                alt=""
+              />
+              <img
+                id="play"
+                width="35"
+                class="pointer"
+                src="images/play.svg"
+                alt=""
+              />
+              <img
+                id="forward"
+                width="35"
+                class="pointer"
+                src="images/nextsong.svg"
+                alt=""
+              />
+            </div>
+            <div class="timevol">
+              <div class="volume">
+                <img width="35" src="images/volume.svg" alt="" />
+                <div class="range">
+                  <input type="range" name="volume" id="rangevolume" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="seekbar">
+            <div class="circle"></div>
+          </div>
+          <div class="songtime">
+            <div class="startTime">00:00</div>
+            <div class="endTime">00:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
